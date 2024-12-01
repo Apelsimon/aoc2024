@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.13)
+
+project(knut
+	VERSION 1.0
+	DESCRIPTION "Advent of code 2024"
+	LANGUAGES C)
+
+set(CMAKE_C_STANDARD 17)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_EXTENSIONS OFF)
+
+add_subdirectory(day1)
