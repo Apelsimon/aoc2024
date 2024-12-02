@@ -10,3 +10,4 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS OFF)
 
 add_subdirectory(day1)
+add_subdirectory(day2)

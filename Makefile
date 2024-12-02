@@ -18,4 +18,4 @@ build:
 	cmake --build . --config $(config)
 
 run:
-	./build/day$(day)/$(config)/aoc input.txt
+	./build/day$(day)/$(config)/day$(day) input.txt

@@ -1,1 +1,1 @@
-add_executable(aoc main.c)
+add_executable(day1 main.c)
