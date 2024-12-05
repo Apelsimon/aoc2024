@@ -1,5 +1,6 @@
 config=Release
 day=1
+full_day=day$(day)
 
 .PHONY: default clean init build run
 
@@ -18,4 +19,4 @@ build:
 	cmake --build . --config $(config)
 
 run:
-	./build/day$(day)/$(config)/day$(day) input.txt
+	./build/$(full_day)/$(config)/$(full_day) input.txt
