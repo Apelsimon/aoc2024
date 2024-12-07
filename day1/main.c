@@ -1,5 +1,7 @@
 #define KNUT_IMPLEMENTATION
 #include "../knut.h"
+#define KNUT_DS_IMPLEMENTATION
+#include "../knut_ds.h"
 
 #include <inttypes.h>
 #include <math.h>

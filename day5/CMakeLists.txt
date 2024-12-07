@@ -1,0 +1,1 @@
+add_executable(day5 main.c)
