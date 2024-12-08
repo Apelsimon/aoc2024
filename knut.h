@@ -39,7 +39,14 @@ int64_t knut_clamp_i64(int64_t value, int64_t min, int64_t max);
         TYPE second; \
     } knut_pair_##TYPE_NAME##_t; \
 
+KNUT_DEFINE_PAIR(uint8_t, u8)
+KNUT_DEFINE_PAIR(uint16_t, u16)
 KNUT_DEFINE_PAIR(uint32_t, u32)
+KNUT_DEFINE_PAIR(uint64_t, u64)
+KNUT_DEFINE_PAIR(int8_t, i8)
+KNUT_DEFINE_PAIR(int16_t, i6)
+KNUT_DEFINE_PAIR(int32_t, i32)
+KNUT_DEFINE_PAIR(int64_t, i64)
 
 knut_pair_u32_t knut_parse_pair_u32(const char* input, int base);
 
