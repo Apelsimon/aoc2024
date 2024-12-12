@@ -1,6 +1,8 @@
 #ifndef KNUT_IO_INCLUDE_H
 #define KNUT_IO_INCLUDE_H
 
+#include "knut.h"
+
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -84,21 +86,6 @@ int knut_io_listen(knut_io_socket_t socket);
 knut_io_socket_t knut_io_accept(knut_io_socket_t socket);
 int knut_io_send(knut_io_socket_t socket, const char* buffer, int buffer_size);
 int knut_io_recv(knut_io_socket_t socket, char* buffer, int buffer_size);
-
-#define KNUT_DEFINE_BUFFER(TYPE, TYPE_NAME) \
-    typedef struct { \
-        TYPE* ptr; \
-        uint64_t size; \
-    } knut_buffer_##TYPE_NAME##_t; \
-\
-static void knut_buffer_##TYPE_NAME##_free(knut_buffer_##TYPE_NAME##_t* buffer) \
-{ \
-    free(buffer->ptr); \
-    buffer->ptr = NULL; \
-    buffer->size = 0; \
-} \
-
-KNUT_DEFINE_BUFFER(char, char)
 
 int knut_io_read_binary(knut_buffer_char_t* buffer, const char* path);
 

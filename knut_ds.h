@@ -122,13 +122,29 @@ static knut_array_##TYPE_NAME##_data_t knut_array_##TYPE_NAME##_get_data( \
     return data; \
 }\
 \
+\
+static knut_array_##TYPE_NAME##_t knut_array_##TYPE_NAME##_copy( \
+    const knut_array_##TYPE_NAME##_t* array) \
+{ \
+    knut_array_##TYPE_NAME##_t new_array = knut_array_##TYPE_NAME##_create(array->capacity); \
+    new_array.size = array->size; \
+    memcpy(new_array.buffer, array->buffer, array->size * sizeof(*array->buffer)); \
+    return new_array; \
+}\
+\
 
+KNUT_DEFINE_ARRAY(char, char)
 KNUT_DEFINE_ARRAY(float, float)
+KNUT_DEFINE_ARRAY(double, double)
 KNUT_DEFINE_ARRAY(int, int)
 KNUT_DEFINE_ARRAY(uint8_t, u8)
 KNUT_DEFINE_ARRAY(uint16_t, u16)
 KNUT_DEFINE_ARRAY(uint32_t, u32)
 KNUT_DEFINE_ARRAY(uint64_t, u64)
+KNUT_DEFINE_ARRAY(int8_t, i8)
+KNUT_DEFINE_ARRAY(int16_t, i16)
+KNUT_DEFINE_ARRAY(int32_t, i32)
+KNUT_DEFINE_ARRAY(int64_t, i64)
 
 #define KNUT_DEFINE_DEQUEUE(TYPE, TYPE_NAME) \
 typedef struct { \

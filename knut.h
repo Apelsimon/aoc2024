@@ -50,6 +50,21 @@ KNUT_DEFINE_PAIR(int64_t, i64)
 
 knut_pair_u32_t knut_parse_pair_u32(const char* input, int base);
 
+#define KNUT_DEFINE_BUFFER(TYPE, TYPE_NAME) \
+    typedef struct { \
+        TYPE* ptr; \
+        uint64_t size; \
+    } knut_buffer_##TYPE_NAME##_t; \
+\
+static void knut_buffer_##TYPE_NAME##_free(knut_buffer_##TYPE_NAME##_t* buffer) \
+{ \
+    free(buffer->ptr); \
+    buffer->ptr = NULL; \
+    buffer->size = 0; \
+} \
+
+KNUT_DEFINE_BUFFER(char, char)
+
 #ifdef __cplusplus
 }
 #endif
