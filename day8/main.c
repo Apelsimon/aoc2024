@@ -157,8 +157,8 @@ int main(int argc, char** argv)
     printf("Part one: %" PRIu64 "\n", total_p1);
     printf("Part two: %" PRIu64 "\n", total_p2);
 
-    knut_buffer_char_free(&buffer_p1);
-    knut_buffer_char_free(&buffer_p2);
+    knut_buffer_char_destroy(&buffer_p1);
+    knut_buffer_char_destroy(&buffer_p2);
 
     return EXIT_SUCCESS;
 }

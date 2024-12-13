@@ -238,7 +238,7 @@ int main(int argc, char** argv)
 
     knut_array_i64_destroy(&blocks_p2);
     knut_array_i64_destroy(&blocks_p1);
-    knut_buffer_char_free(&buffer);
+    knut_buffer_char_destroy(&buffer);
 
     return EXIT_SUCCESS;
 }

@@ -115,7 +115,7 @@ int main(int argc, char** argv)
 
     printf("Part one: %" PRIu64 "\n", positions);
 
-    knut_buffer_char_free(&buffer);
+    knut_buffer_char_destroy(&buffer);
 
     return EXIT_SUCCESS;
 }

@@ -56,13 +56,14 @@ knut_pair_u32_t knut_parse_pair_u32(const char* input, int base);
         uint64_t size; \
     } knut_buffer_##TYPE_NAME##_t; \
 \
-static void knut_buffer_##TYPE_NAME##_free(knut_buffer_##TYPE_NAME##_t* buffer) \
+static void knut_buffer_##TYPE_NAME##_destroy(knut_buffer_##TYPE_NAME##_t* buffer) \
 { \
     free(buffer->ptr); \
     buffer->ptr = NULL; \
     buffer->size = 0; \
 } \
 
+KNUT_DEFINE_BUFFER(bool, bool)
 KNUT_DEFINE_BUFFER(char, char)
 
 #ifdef __cplusplus

@@ -377,7 +377,7 @@ int knut_io_read_binary(knut_buffer_char_t* buffer, const char* path)
 done:
     if (result != 0)
     {
-        knut_buffer_char_free(buffer);
+        knut_buffer_char_destroy(buffer);
     }
 
     fclose(file_handle);

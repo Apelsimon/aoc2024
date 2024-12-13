@@ -312,6 +312,13 @@ static void knut_dequeue_##TYPE_NAME##_pop_back(knut_dequeue_##TYPE_NAME##_t* de
     } \
 } \
  \
+static void knut_dequeue_##TYPE_NAME##_clear(knut_dequeue_##TYPE_NAME##_t* dequeue) \
+{ \
+    dequeue->size = 0; \
+    dequeue->front = 0; \
+    dequeue->back = 0; \
+} \
+ \
 static void knut_dequeue_##TYPE_NAME##_foreach(knut_dequeue_##TYPE_NAME##_t* dequeue, \
     void(*callback)(TYPE*)) \
 { \

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "knut_ds.h": "c",
+        "knut_io.h": "c"
+    }
+}
