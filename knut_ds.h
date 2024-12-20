@@ -350,6 +350,10 @@ static void knut_dequeue_##TYPE_NAME##_foreach(knut_dequeue_##TYPE_NAME##_t* deq
 
 KNUT_DEFINE_DEQUEUE(float, float)
 KNUT_DEFINE_DEQUEUE(int, int)
+KNUT_DEFINE_DEQUEUE(uint8_t, u8)
+KNUT_DEFINE_DEQUEUE(uint16_t, u16)
+KNUT_DEFINE_DEQUEUE(uint32_t, u32)
+KNUT_DEFINE_DEQUEUE(uint64_t, u64)
 
 #ifdef __cplusplus
 }
